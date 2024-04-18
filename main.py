@@ -30,7 +30,7 @@ def get_all_employee():
         employee_dict = {
             "id": employee[0],
             "name": employee[1],
-            "age": employee[2],
+            "department": employee[2],
         }
         employees_data.append(employee_dict)
 
