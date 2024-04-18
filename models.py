@@ -1,3 +1,4 @@
+"""structure of the data to add in database"""
 from pydantic import BaseModel
 
 

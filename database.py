@@ -1,3 +1,4 @@
+"""create connection to the database and return the connection"""
 import sqlite3
 
 

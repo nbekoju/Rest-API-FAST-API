@@ -1,6 +1,14 @@
-from fastapi import HTTPException, status
+"""
+helper function
+    - add initial data
+    - add employee
+    - get employee by id
+"""
+
 import sqlite3
 import logging
+
+from fastapi import HTTPException, status
 
 from models import Employee
 from database import create_connection
@@ -9,7 +17,7 @@ from database import create_connection
 logging.basicConfig(level=logging.INFO)
 
 
-def insertInitialData():
+def insert_initial_data():
     """
     insert the initial data if the table is empty
     """
@@ -57,6 +65,7 @@ def add_employee(employee: Employee):
 
 
 def get_employee_by_id(employee_id: int):
+    """return the employee with given employee id"""
     conn = create_connection()
     with conn:
         conn.row_factory = sqlite3.Row
